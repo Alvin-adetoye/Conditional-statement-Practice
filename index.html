@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f5f7f5">
+  <title>INEC Voting Eligibility Checker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page-shell container-fluid d-flex align-items-center justify-content-center">
+    <section class="checker-card" aria-labelledby="page-title">
+      <div class="d-flex align-items-center gap-2" aria-label="INEC civic utility">
+        <span class="brand-mark" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <path d="M5 3.75h10v12.5H5z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+            <path d="M7.5 7h5M7.5 10h5M7.5 13h3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="m12.2 14.5 1.1 1.1 2.2-2.6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+        <span class="brand-name text-uppercase">INEC · Voter information</span>
+      </div>
+
+      <h1 id="page-title">Check your voting eligibility</h1>
+      <p class="intro">A quick check to see if you meet the minimum age to vote in Nigeria.</p>
+
+      <div class="mt-4 pt-1">
+        <label class="birth-label d-block" for="birthInput">Year of birth</label>
+        <input
+          class="birth-input form-control"
+          type="number"
+          id="birthInput"
+          placeholder="e.g. 2005"
+          inputmode="numeric"
+          aria-describedby="year-hint"
+        >
+        <div id="year-hint" class="form-text mt-2">Enter your four-digit birth year.</div>
+        <button class="check-button btn w-100 mt-3" type="button" onclick="show()">Check eligibility</button>
+      </div>
+
+      <div id="display" class="result" aria-live="polite" aria-atomic="true"></div>
+      <p class="card-note">You must be at least 18 years old to be eligible to vote.</p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
