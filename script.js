@@ -9,6 +9,11 @@ function show() {
     return
   }
 
+  if (birthYear > currentYear) {
+    displayArea.innerHTML = `<p>Invalid Birth year!</p>`
+    return
+  }
+
   if (birthYear.length !== 4) {
     displayArea.innerHTML = `<p>Input must be four digit!</p>`
     return
