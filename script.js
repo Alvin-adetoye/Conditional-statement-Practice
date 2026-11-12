@@ -5,12 +5,12 @@ function show() {
   let displayArea = document.getElementById("display")
 
   if (birthYear == "") {
-    alert("Input should be filled")
+    displayArea.innerHTML = `<p>Enter Bith year</p>`
     return
   }
 
   if (birthYear.length !== 4) {
-    alert("Input must be four digits")
+    displayArea.innerHTML = `<p>Input must be four digit!</p>`
     return
   }
 
