@@ -26,7 +26,7 @@ function show() {
   }
 
   else {
-    displayArea.innerHTML = `<p>The young shall grow...You have just ${18 - age} year to be eligible `
+    displayArea.innerHTML = `<p>The young shall grow...You have just ${18 - age} years to be eligible `
     let birthYear = document.getElementById("birthInput").value = ""
   } 
 }
